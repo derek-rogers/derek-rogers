@@ -14,14 +14,16 @@ export default class Blog extends Component {
             return <React.Fragment></React.Fragment>
         }
 
-        let latestPost = this.props.blogPost.data
-        let converter = new showdown.Converter()
-        let body = converter.makeHtml(latestPost.body)
-        let date = new Date(latestPost.datePosted)
+        const latestPost = this.props.blogPost.data
+        const converter = new showdown.Converter()
+        const body = converter.makeHtml(latestPost.body)
+        const date = new Date(latestPost.created_at)
+        const dateOptions = { month: 'long', day: 'numeric', year: 'numeric'}
+        const timeOptions = {hour: 'numeric', minute: 'numeric'}
         return (
             <div className={style.blogPost}>
                 <h1>{latestPost.title}</h1>
-                <h5>{date.toLocaleDateString()}</h5>
+                <h5>{date.toLocaleDateString('en-US', dateOptions)} | {date.toLocaleTimeString('en-US', timeOptions)}</h5>
                 <div className={style.blogBody} dangerouslySetInnerHTML={{ __html: body }}></div>
             </div>
         )
