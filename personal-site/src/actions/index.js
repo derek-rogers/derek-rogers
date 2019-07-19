@@ -78,7 +78,7 @@ export const fetchLatestPost = () => {
             } else {
                 console.log(body)
                 let latestPost = body[body.length-1]
-                window.location = `/blog/${latestPost.id}`
+                window.location = `/#/blog/${latestPost.id}`
                 dispatch({
                     type: FETCH_POST_SUCCESS,
                     payload: {
