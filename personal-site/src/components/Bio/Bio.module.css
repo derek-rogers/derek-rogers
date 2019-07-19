@@ -1,0 +1,39 @@
+.Bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+    width: 80%;
+    text-align: center;
+}
+
+.Bio h1 {
+    font-weight: 100;
+}
+
+.headshot {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px 1px black;
+}
+
+.headshot img {
+    width: 200px
+}
+
+.socialIconsContainer {
+    width: 30%;
+    max-width: 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socialIconsContainer img {
+    width: 50px;
+}
