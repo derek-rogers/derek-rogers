@@ -12,7 +12,7 @@ export const fetchPost = postId => {
     return dispatch => {
         dispatch({ type: FETCH_POST_BEGIN })
 
-        return fetch(`http://localhost:1337/posts/${postId}`)
+        return fetch(`https://fathomless-gorge-17177.herokuapp.com/posts/${postId}`)
             .then(response => response.json().then(body => ({ response, body })))
             .then(({ response, body }) => {
                 if (!response.ok) {
@@ -38,7 +38,7 @@ export const fetchAllPosts = () => {
     return dispatch => {
         dispatch({type: FETCH_ALL_POSTS_BEGIN})
 
-        return fetch('http://localhost:1337/posts')
+        return fetch('https://fathomless-gorge-17177.herokuapp.com/posts')
         .then(response => response.json().then(body => ({response, body})))
         .then(({response, body}) => {
             if(!response.ok){
@@ -64,11 +64,10 @@ export const fetchLatestPost = () => {
     return dispatch => {
         dispatch({type: FETCH_POST_BEGIN})
 
-        return fetch('http://localhost:1337/posts')
+        return fetch('https://fathomless-gorge-17177.herokuapp.com/posts')
         .then(response => response.json().then(body => ({response, body})))
         .then(({response, body}) => {
             if(!response.ok){
-                console.log("FAILURE")
                 dispatch({
                     type: FETCH_POST_FAILURE,
                     payload: {
@@ -76,7 +75,6 @@ export const fetchLatestPost = () => {
                     }
                 })
             } else {
-                console.log(body)
                 let latestPost = body[body.length-1]
                 window.location = `/#/blog/${latestPost.id}`
                 dispatch({

@@ -6,7 +6,6 @@ import Blog from './'
 class BlogContainer extends Component {
 
     componentDidMount() {
-        console.log("Mount")
         if (this.props.match.params && this.props.match.params.id) {
             this.props.fetchPost(this.props.match.params.id)
         } else {
