@@ -2,19 +2,26 @@
     margin: 1rem;
     margin-top: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+
 }
 
 .blogHeader {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
 }
 
 .blogBody {
-    background-color: #f8f8f8;
+    background-color: white;
     border-radius: 5px;
     padding: 1rem;
-    width: 100%
+    width: 100%;
+    line-height: 1.5rem;
 }
 
 .blogNavigation {
@@ -35,6 +42,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0 3rem;
+    max-width: 700px;
 }
 
 .blogPost > h1 {
@@ -44,4 +52,14 @@
 
 .blogPost > h5 {
     margin-top: 0;
+}
+
+.blogBody p {
+    display: flex;
+    flex-direction: row;
+}
+
+.blogBody p > img {
+    margin-left: auto;
+    margin-right: auto;
 }
