@@ -1,9 +1,0 @@
-.Content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.Content h1 {
-    font-weight: 100;
-}
