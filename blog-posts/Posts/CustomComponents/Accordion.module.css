@@ -1,0 +1,50 @@
+.AccordionWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.AccordionItem {
+    background-color: white;
+    padding: 0rem;
+    margin-top: 0.75rem;
+}
+
+.AccordionTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.AccordionContent {
+    padding: 0 1rem 1rem;
+    margin: 0 1rem 1rem;
+}
+
+.expand > .AccordionContent {
+    height: auto;
+    opacity: 1;
+    transition: all 0.5s linear;
+    /*margin: 0rem 1.5rem 1rem 1.5rem;*/
+}
+
+.collapse > .AccordionContent {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: all 0.5s linear;
+}
+
+.toggleIndicator {
+    height: 15px;
+    user-select: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.toggleIndicator.closed {
+    transform: rotate(90deg);
+    transition: all 0.1s ease-in-out;
+}
