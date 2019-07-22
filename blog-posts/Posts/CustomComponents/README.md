@@ -39,6 +39,8 @@ That works just fine for components that are simply custom styles on top of buil
 
 ## The Accordion Component
 
+*The source code for my Accordion component can be found [here](https://github.com/derek-rogers/derek-rogers.github.io/tree/development/blog-posts/Posts/CustomComponents/src)*
+
 The main custom component I wrote as a part of this transition was the Accordion. Where the Semantic Accordion was highly opinionated, I wanted my Accordion to have as few opinions about how it should look as possible. I decided the most resilient design would be one that simply provides the "open" and "close" behaviors, but allows users to specify their own visual components inside it.
 
 The Accordion's usage is very similar to Semantic's:
