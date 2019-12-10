@@ -6,7 +6,6 @@ import style from './Header.module.css'
 
 const links = [
     { displayTitle: 'Home', url: '/' },
-    { displayTitle: 'Blog', url: '/blog' },
 ]
 
 export class Header extends Component {
